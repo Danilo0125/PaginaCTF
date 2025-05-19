@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #4a6fa5;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    border-bottom: 5px solid #304c70;
+}
+
+h1.nombre-persona {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.titulo-chistoso {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+section {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 25px;
+}
+
+.bio-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.img-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#cambiar-foto {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#cambiar-foto:hover {
+    transform: rotate(180deg);
+}
+
+.bio-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.bio-info ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.bio-info li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.bio-texto {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #4a6fa5;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+.chart-container {
+    margin-bottom: 30px;
+    height: 300px;
+}
+
+.stats-boxes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stat-box {
+    background: #eef5ff;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+}
+
+.big-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #4a6fa5;
+    margin: 10px 0;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #4a6fa5;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-date {
+    position: absolute;
+    width: 100px;
+    text-align: center;
+    background-color: #4a6fa5;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 0;
+    top: 20px;
+}
+
+.timeline-item:nth-child(odd) .timeline-date {
+    right: -50px;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    left: -50px;
+}
+
+.testimonios {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.testimonio {
+    background: #f5f9ff;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #4a6fa5;
+    font-style: italic;
+}
+
+.testimonio cite {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #304c70;
+    color: white;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+    }
+    
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-date,
+    .timeline-item:nth-child(even) .timeline-date {
+        left: -10px;
+        top: 20px;
+        width: 80px;
+        font-size: 14px;
+    }
+}

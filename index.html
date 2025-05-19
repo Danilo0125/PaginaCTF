@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografía Extraordinariamente Chistosa</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="nombre-persona">Nombre de la Persona Extraordinaria</h1>
+        <p class="titulo-chistoso">"El/La [inserte apodo ridículo aquí]"</p>
+    </header>
+    
+    <div class="container">
+        <section class="bio-section">
+            <div class="profile">
+                <div class="img-container">
+                    <img src="https://place-hold.it/300x300" alt="Foto de Perfil" id="profile-pic">
+                    <button id="cambiar-foto" title="¡Cambia mi cara!">🔄</button>
+                </div>
+                <div class="bio-info">
+                    <h2>Datos Poco Importantes</h2>
+                    <ul>
+                        <li><strong>Alias:</strong> <span id="alias">Múltiples, dependiendo de quién pregunte</span></li>
+                        <li><strong>Fecha de Nacimiento:</strong> <span id="nacimiento">Algún día del pasado</span></li>
+                        <li><strong>Superpoder:</strong> <span id="superpoder">Materializar excusas de la nada</span></li>
+                        <li><strong>Enemigo Jurado:</strong> <span id="enemigo">El despertador</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bio-texto">
+                <h2>¿Quién es realmente esta persona?</h2>
+                <p>Nuestro protagonista nació en [año] en [lugar], probablemente llorando como todos, pero con un brillo especial en los ojos que indicaba que estaba destinado a [hacer algo ridículamente específico].</p>
+                <p>Después de fracasar estrepitosamente en [actividad normal], descubrió su verdadera pasión: [actividad extraordinaria pero absurda]. El resto, como dicen, es historia (una historia que nadie recuerda correctamente).</p>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <h2>Estadísticas Vitales Absolutamente Precisas</h2>
+            
+            <div class="chart-container">
+                <h3>Distribución Diaria de Actividades</h3>
+                <canvas id="actividadesChart"></canvas>
+            </div>
+            
+            <div class="chart-container">
+                <h3>Nivel de Extraordinariedad a lo Largo del Tiempo</h3>
+                <canvas id="extraordinariedadChart"></canvas>
+            </div>
+            
+            <div class="stats-boxes">
+                <div class="stat-box">
+                    <h3>Tazas de Café</h3>
+                    <p class="big-number">∞</p>
+                    <p>Bebidas en total</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Ideas Brillantes</h3>
+                    <p class="big-number">9,752</p>
+                    <p>95% olvidadas en la ducha</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Vidas de Gato Usadas</h3>
+                    <p class="big-number">5/9</p>
+                    <p>Quedan 4 aventuras más</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline-section">
+            <h2>Línea de Tiempo de Logros Dudosos</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">1990</div>
+                    <div class="timeline-content">
+                        <h3>El Comienzo</h3>
+                        <p>Nació. Todo el mundo lo aplaudió por no hacer absolutamente nada.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2001</div>
+                    <div class="timeline-content">
+                        <h3>Primer Gran Logro</h3>
+                        <p>Descubrió que los calcetines pueden perderse misteriosamente en la lavadora.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2010</div>
+                    <div class="timeline-content">
+                        <h3>La Gran Crisis</h3>
+                        <p>Intentó cocinar espaguetis sin agua. La estufa nunca volvió a ser la misma.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h3>Reconocimiento Internacional</h3>
+                        <p>Logró ser reconocido como "la persona más improbable de ganar un premio Nobel" por la Academia de Logros Improbables.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="testimonios-section">
+            <h2>Lo Que Otros Dicen</h2>
+            <div class="testimonios">
+                <div class="testimonio">
+                    <p>"Nunca conocí a nadie que pudiera [hacer algo tan ordinario] de manera tan extraordinariamente complicada."</p>
+                    <cite>— Amigo Confundido</cite>
+                </div>
+                <div class="testimonio">
+                    <p>"Si me dieran un peso por cada vez que esta persona me sorprende, ya habría pagado mi hipoteca."</p>
+                    <cite>— Colega Impresionado</cite>
+                </div>
+                <div class="testimonio">
+                    <p>"¿Me están pagando por decir cosas buenas? Porque necesito que me paguen más."</p>
+                    <cite>— Familiar Honesto</cite>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>© <span id="current-year"></span> Biografías Extraordinariamente Cuestionables™</p>
+        <p><small>Advertencia: Cualquier parecido con la verdad es pura coincidencia.</small></p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
