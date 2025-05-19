@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Datos Confidenciales</title>
+    <link rel="stylesheet" href="qr_style.css">
+</head>
+<body>
+    <header>
+        <h1>Portal de Acceso Restringido</h1>
+        <p>Escanea los códigos QR para acceder a información clasificada</p>
+    </header>
+    
+    <div class="container">
+        <div class="warning">
+            <p>⚠️ ATENCIÓN: Esta página contiene información confidencial. Continúa bajo tu propia responsabilidad.</p>
+        </div>
+        
+        <div class="qr-grid">
+            <div class="qr-item">
+                <div class="qr-label">Clave de Acceso #1</div>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.youtube.com/watch?v=dQw4w9WgXcQ" alt="QR Code 1">
+                <div class="qr-description">Credenciales de administrador</div>
+            </div>
+            
+            <div class="qr-item">
+                <div class="qr-label">Archivo Confidencial #2</div>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.youtube.com/shorts/xvFZjo5PgG0" alt="QR Code 2">
+                <div class="qr-description">Ubicación del sistema principal</div>
+            </div>
+            
+            <div class="qr-item">
+                <div class="qr-label">Database Access #3</div>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://i.kym-cdn.com/entries/icons/original/000/000/091/TrollFace.jpg" alt="QR Code 3">
+                <div class="qr-description">Consulta SQL para extraer datos</div>
+            </div>
+            
+            <div class="qr-item">
+                <div class="qr-label">Key File #4</div>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.youtube.com/watch?v=rTga41r3a4s" alt="QR Code 4">
+                <div class="qr-description">Clave de descifrado</div>
+            </div>
+            
+            <!-- Aquí estará el QR "especial" que contiene la verdadera clave -->
+            <div class="qr-item special-qr" id="qr-especial">
+                <div class="qr-label">Emergency Backup</div>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=CTF{Este_no_es_el_verdadero_flag_sigue_buscando}" alt="QR Code Especial">
+                <div class="qr-description">Último recurso - Solo emergencias</div>
+            </div>
+        </div>
+        
+        <!-- Imagen oculta con datos secretos (para añadir después) -->
+        <div id="secretContainer" style="display: none;">
+            <!-- Aquí se colocará más tarde una imagen con información esteganográfica -->
+        </div>
+        
+        <div class="notes">
+            <h3>Instrucciones:</h3>
+            <ul>
+                <li>Estos QR contienen información crucial para la misión</li>
+                <li>No todos los caminos llevan a Roma</li>
+                <li>La verdad está oculta a simple vista</li>
+                <li><span class="hint">A veces lo que no ves es más importante que lo que ves</span></li>
+                <li>Recuerda: la curiosidad mató al gato, pero la información salvó al hacker</li>
+                <li>Si encuentras un error, ¡felicidades! Has encontrado un bug en el sistema</li>
+                <li>Si ves algo raro, no te preocupes, es parte del plan</li>
+                <li>Recuerda: la seguridad es un juego de ingenio</li>
+                <li>Si no puedes abrir el archivo, intenta con un poco de magia</li>
+                <li>La clave no está en el QR, está en tu mente</li>
+                <li>Si todo falla, intenta reiniciar el universo</li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Sistema de Seguridad Altamente Clasificado - Acceso registrado y monitoreado</p>
+        <!-- Comentario oculto con pista -->
+        <!-- La clave no está en los QR, busca más allá de lo visible -->
+    </footer>
+    
+    <script src="qr_script.js"></script>
+</body>
+</html>

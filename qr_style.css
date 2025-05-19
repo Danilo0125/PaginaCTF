@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #0a0a0a;
+    color: #33ff33;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #33ff33;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #33ff33;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.warning {
+    background-color: #330000;
+    border: 1px solid #ff3333;
+    color: #ff3333;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+.qr-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.qr-item {
+    background-color: #111;
+    border: 1px solid #33ff33;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.qr-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(51, 255, 51, 0.5);
+}
+
+.qr-label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.qr-item img {
+    max-width: 100%;
+    margin: 10px 0;
+    filter: drop-shadow(0 0 5px rgba(51, 255, 51, 0.3));
+}
+
+.qr-description {
+    font-size: 0.9em;
+    color: #cccccc;
+}
+
+.notes {
+    background-color: #111;
+    border-left: 4px solid #33ff33;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.notes h3 {
+    margin-bottom: 10px;
+}
+
+.notes ul {
+    list-style-type: none;
+}
+
+.notes li {
+    padding: 5px 0;
+    margin-left: 20px;
+}
+
+.notes li::before {
+    content: ">";
+    margin-right: 10px;
+    color: #33ff33;
+}
+
+.hint {
+    color: #1a1a1a;
+    background-color: #1a1a1a;
+    padding: 0 5px;
+    cursor: help;
+}
+
+.hint:hover {
+    color: #ff9900;
+    background-color: transparent;
+    transition: all 0.3s;
+}
+
+.special-qr {
+    position: relative;
+}
+
+.special-qr::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: 10;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    font-size: 0.8em;
+    color: #666;
+}
+
+/* Estilos para elementos ocultos pero importantes para el CTF */
+.invisible-clue {
+    position: absolute;
+    opacity: 0;
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+    .qr-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+}

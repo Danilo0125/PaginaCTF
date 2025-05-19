@@ -153,3 +153,36 @@ cambiarDatoAleatorio('alias', datosGraciosos.alias);
 cambiarDatoAleatorio('nacimiento', datosGraciosos.nacimiento);
 cambiarDatoAleatorio('superpoder', datosGraciosos.superpoder);
 cambiarDatoAleatorio('enemigo', datosGraciosos.enemigo);
+
+// Código para activación de botón secreto
+const secretCode = ['h', 'a', 'c', 'k', 'm', 'e'];
+let userInput = [];
+let secretTimer;
+
+document.addEventListener('keydown', function(e) {
+    // Guarda la tecla presionada
+    userInput.push(e.key.toLowerCase());
+    
+    // Limita el array para que no crezca infinitamente
+    if (userInput.length > secretCode.length) {
+        userInput.shift();
+    }
+    
+    // Reinicia el temporizador cada vez que se presiona una tecla
+    clearTimeout(secretTimer);
+    secretTimer = setTimeout(() => {
+        userInput = []; // Reinicia la secuencia después de 2 segundos sin actividad
+    }, 2000);
+    
+    // Comprueba si la secuencia coincide con el código secreto
+    if (userInput.join('') === secretCode.join('')) {
+        console.log('¡Código secreto activado!'); // Para depuración
+        document.getElementById('boton-secreto').click(); // Activa el enlace secreto
+        userInput = []; // Reinicia la secuencia
+    }
+    
+    // Huevo de pascua - mostrar mensaje en consola cuando se escribe parte de la secuencia
+    if (secretCode.join('').includes(userInput.join(''))) {
+        console.log('Estás cerca de algo...');
+    }
+});
